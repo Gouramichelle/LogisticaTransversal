@@ -32,10 +32,7 @@ public class LogisticaService {
         if (usuarioDTO == null) {
             throw new ResourceNotFoundException("No existe esta usuario");
         }
-        FacturacionDTO facturacionDTO = facturacionService.obtenerFacturacionPorId(logistica.getId());
-        if (facturacionDTO == null) {
-            throw new ResourceNotFoundException("No existe esta Facturacion");
-        }
+
         return  logisticaRepository.save(logistica);
 
     }

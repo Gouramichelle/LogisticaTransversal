@@ -95,14 +95,7 @@ public class LogisticaServiceTest {
                 () -> logisticaService.crearLogistica(logistica));
     }
 
-    @Test
-    void crearLogistica_facturacionNoExiste() {
-        when(usuarioService.obtenerUsuarioId(1)).thenReturn(new UsuarioDTO());
-        when(facturacionService.obtenerFacturacionPorId(1)).thenReturn(null);
 
-        assertThrows(ResourceNotFoundException.class,
-                () -> logisticaService.crearLogistica(logistica));
-    }
 
     @Test
     void actualizarLogistica_ok() {

@@ -11,7 +11,7 @@ public class FacturacionService {
     private final RestTemplate restTemplate;
 
     @Value("${services.facturacion.url}") 
-    private String facturacionUrl;
+    public String facturacionUrl;
 
     public FacturacionService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
